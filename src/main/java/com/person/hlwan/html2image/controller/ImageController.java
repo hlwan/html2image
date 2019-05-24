@@ -4,6 +4,7 @@ import gui.ava.html.image.generator.HtmlImageGenerator;
 import org.apache.tomcat.util.http.fileupload.IOUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletResponse;
@@ -16,7 +17,8 @@ public class ImageController {
 
     private Logger logger= LoggerFactory.getLogger(ImageController.class);
 
-    private String rootPath="/data/server/images/";
+    @Value("${root.path}")
+    private String rootPath;
 
 
     @GetMapping("/generate")
