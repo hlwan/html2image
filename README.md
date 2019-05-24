@@ -10,5 +10,5 @@
    
 项目配置项：
     
-    1，server.port:8080  项目运行的端口
-    2，root.path 项目图片存放的图片，需要有读写权限
+    1，server.port:8080  项目运行的端口，默认为8080
+    2，root.path 项目图片存放的图片，需要有读写权限，默认为/data/server/images/
